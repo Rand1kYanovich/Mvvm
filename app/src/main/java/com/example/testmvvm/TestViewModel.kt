@@ -30,9 +30,6 @@ class TestViewModel : BaseViewModel(), KoinComponent {
         }
     }
 
-    fun getList(): LiveData<List<CustomObject>> {
-        return list
-    }
 
     private fun loadTitle() {
         coroutineScope.launch {
@@ -42,8 +39,5 @@ class TestViewModel : BaseViewModel(), KoinComponent {
         }
     }
 
-    fun getTitle(): LiveData<CustomObject> {
-        return text
-    }
 
 }

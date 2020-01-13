@@ -16,7 +16,6 @@ class TestFragment : BaseFragment() {
         ViewModelProviders.of(this).get(TestViewModel::class.java)
     }
 
-    //проверить переживает ли поворот активити viemodel
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -24,16 +23,15 @@ class TestFragment : BaseFragment() {
         val adapter = TestRVAdapter(arrayListOf(), requireContext())
         view.recyclerView.adapter = adapter
 
-        viewModel.getTitle().observe(viewLifecycleOwner, Observer<CustomObject> {
+        viewModel.text.observe(viewLifecycleOwner, Observer<CustomObject> {
             title.text = it.text
         })
 
         view.button.setOnClickListener {
             findNavController().navigate(R.id.action_testFragment_to_testSecondFragment)
         }
-
-        //посмотреть примеры
-        viewModel.getList().observe(viewLifecycleOwner, Observer<List<CustomObject>> {
+        
+        viewModel.list.observe(viewLifecycleOwner, Observer<List<CustomObject>> {
             adapter.updateList(it)
         })
     }

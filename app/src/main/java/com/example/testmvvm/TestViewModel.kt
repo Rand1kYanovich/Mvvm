@@ -8,33 +8,41 @@ import org.koin.core.KoinComponent
 import org.koin.core.inject
 import kotlin.coroutines.coroutineContext
 
-class TestViewModel : ViewModel(), KoinComponent {
+class TestViewModel : BaseViewModel(), KoinComponent {
 
     private val iteractor: TestIteractor by inject()
+
     val text: MutableLiveData<CustomObject> = MutableLiveData()
     val list: MutableLiveData<List<CustomObject>> = MutableLiveData()
 
-    private val exHandler = CoroutineExceptionHandler { _, exception -> }
-    private val job = SupervisorJob()
-    val coroutineContext = Dispatchers.IO + exHandler + job
-    val coroutineScope = CoroutineScope(coroutineContext)
 
-    fun getList(): LiveData<List<CustomObject>> {
+    init {
+        loadList()
+        loadTitle()
+    }
+
+    private fun loadList() {
         coroutineScope.launch {
             if (list.value == null) {
                 list.postValue(iteractor.getList())
             }
 
         }
+    }
+
+    fun getList(): LiveData<List<CustomObject>> {
         return list
     }
 
-    fun getTitle(): LiveData<CustomObject> {
+    private fun loadTitle() {
         coroutineScope.launch {
             if (text.value == null) {
                 text.postValue(iteractor.getTitle())
             }
         }
+    }
+
+    fun getTitle(): LiveData<CustomObject> {
         return text
     }
 

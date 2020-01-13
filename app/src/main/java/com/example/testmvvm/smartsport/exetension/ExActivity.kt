@@ -1,4 +1,4 @@
-package com.example.testmvvm
+package com.example.testmvvm.smartsport.exetension
 
 import android.app.Activity
 import androidx.core.view.isVisible

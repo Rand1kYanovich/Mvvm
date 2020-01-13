@@ -1,4 +1,4 @@
-package com.example.testmvvm
+package com.example.testmvvm.smartsport.ui.common.list
 
 import android.content.Context
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.test_item.view.*
 import android.view.LayoutInflater
+import com.example.testmvvm.smartsport.entity.core.main.CustomObject
+import com.example.testmvvm.R
 
 
 class TestRVAdapter(val list: ArrayList<CustomObject>, val context: Context) :

@@ -1,9 +1,8 @@
-package com.example.testmvvm
+package com.example.testmvvm.smartsport.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.testmvvm.R
 
 class MainActivity : AppCompatActivity() {
 

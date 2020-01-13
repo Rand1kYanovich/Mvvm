@@ -1,8 +1,6 @@
-package com.example.testmvvm
+package com.example.testmvvm.smartsport.model
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.example.testmvvm.smartsport.model.TestRepository
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 

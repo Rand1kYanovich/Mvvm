@@ -1,4 +1,4 @@
-package com.example.testmvvm
+package com.example.testmvvm.smartsport.ui.utils
 
 import io.reactivex.Observable
 import io.reactivex.subjects.PublishSubject

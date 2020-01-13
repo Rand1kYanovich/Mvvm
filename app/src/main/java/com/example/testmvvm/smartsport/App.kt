@@ -1,6 +1,7 @@
-package com.example.testmvvm
+package com.example.testmvvm.smartsport
 
 import android.app.Application
+import com.example.testmvvm.smartsport.di.module.module
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

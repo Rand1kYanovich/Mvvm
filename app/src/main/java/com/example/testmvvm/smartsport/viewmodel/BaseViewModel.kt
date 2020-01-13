@@ -1,4 +1,4 @@
-package com.example.testmvvm
+package com.example.testmvvm.smartsport.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

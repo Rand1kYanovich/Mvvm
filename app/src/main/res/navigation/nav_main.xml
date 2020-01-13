@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/testFragment"
-        android:name="com.example.testmvvm.TestFragment"
+        android:name="com.example.testmvvm.smartsport.ui.fragment.main.first.TestFragment"
 
         >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/testSecondFragment"
-        android:name="com.example.testmvvm.TestSecondFragment"
+        android:name="com.example.testmvvm.smartsport.ui.fragment.main.second.TestSecondFragment"
         />
 
 </navigation>

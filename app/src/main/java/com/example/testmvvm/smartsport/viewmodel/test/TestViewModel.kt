@@ -1,12 +1,12 @@
-package com.example.testmvvm
+package com.example.testmvvm.smartsport.viewmodel.test
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.example.testmvvm.smartsport.entity.core.main.CustomObject
+import com.example.testmvvm.smartsport.model.TestIteractor
+import com.example.testmvvm.smartsport.viewmodel.BaseViewModel
 import kotlinx.coroutines.*
 import org.koin.core.KoinComponent
 import org.koin.core.inject
-import kotlin.coroutines.coroutineContext
 
 class TestViewModel : BaseViewModel(), KoinComponent {
 

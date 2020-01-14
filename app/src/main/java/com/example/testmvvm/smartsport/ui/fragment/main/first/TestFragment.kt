@@ -39,7 +39,6 @@ class TestFragment : BaseFragment() {
         view.button.setOnClickListener {
             findNavController().navigate(R.id.action_testFragment_to_testSecondFragment)
         }
-
         viewModel.list.observe(viewLifecycleOwner, Observer<List<CustomObject>> {
             adapter.updateList(it)
         })

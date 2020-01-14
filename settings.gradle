@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':Shared'
 rootProject.name='TestMVVM'

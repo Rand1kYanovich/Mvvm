@@ -15,4 +15,8 @@ class TestIteractor(
     suspend fun getTitle() = repository.getTitle()
 
     suspend fun getTimon() = timonRepository.getTimon()
+
+    suspend fun postTimon(){
+        timonRepository.postTimon()
+    }
 }

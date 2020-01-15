@@ -1,10 +1,11 @@
 package com.timon
 
-import io.ktor.client.engine.HttpClientEngine
-
-class TimonRepository() {
+class TimonRepository {
 
     private val timonApi:TimonApi = TimonApi()
 
-    suspend fun getTimon() = timonApi.fetchTimon()
+    suspend fun getTimon() = timonApi.getTimon()
+    suspend fun postTimon(){
+        timonApi.postTimon()
+    }
 }

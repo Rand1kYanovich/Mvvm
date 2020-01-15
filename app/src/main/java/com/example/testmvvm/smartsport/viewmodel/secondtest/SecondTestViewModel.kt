@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.testmvvm.smartsport.model.TestIteractor
 import com.example.testmvvm.smartsport.viewmodel.BaseViewModel
-import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import kotlinx.coroutines.launch
 import org.koin.core.KoinComponent
 import org.koin.core.inject
@@ -25,7 +24,9 @@ class SecondTestViewModel : BaseViewModel(), KoinComponent {
             coroutineScope.launch {
                 try {
                     timonString.postValue(iteractor.getTimon().toString())
+                    iteractor.postTimon()
                 } catch (e: Exception) {
+                    throw(e)
                     Log.e("Error", e.message)
                 }
             }
